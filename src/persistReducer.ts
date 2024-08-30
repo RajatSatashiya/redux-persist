@@ -154,6 +154,8 @@ export default function persistReducer<S, A extends Action>(
       }
     } else if (action.type === PURGE) {
       _purge = true
+      console.log("purge will happen", config);
+      alert("PURGING NOW")
       action.result(purgeStoredState(config))
       return {
         ...baseReducer(restState, action),
