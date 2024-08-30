@@ -139,6 +139,5 @@ export default function createPersistoid(config: PersistConfig<any>): Persistoid
 
 // @NOTE in the future this may be exposed via config
 function defaultSerialize(data: any) {
-  console.log("defaultSerialize was called: ", data)
   return JSON.stringify(data)
 }
